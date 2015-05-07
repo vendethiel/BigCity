@@ -1,5 +1,6 @@
-#import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
+@import UIKit;
+@import MapKit;
+
 #import "DataSourceButtonView.h"
 
 @interface MapController : UIViewController
