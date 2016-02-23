@@ -9,6 +9,7 @@
 @interface MapController ()
 
 @property (nonatomic, strong) RequestHelper* requestHelper;
+
 @property (nonatomic, strong) DataProvider* provider;
 
 @end
@@ -20,8 +21,7 @@
     
     CLLocationManager* locationManager = [[CLLocationManager alloc] init];
     [locationManager requestWhenInUseAuthorization];
-    
-    
+
     self.mapView.showsUserLocation = YES;
     [self.mapView setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
 
@@ -33,7 +33,6 @@
 - (void)loadButtons {
     void(^cb)(NSString*, NSString*) = ^(NSString *key, NSString *url) {
         [self resetAnnotations];
-        NSLog(@"Getting key %@ from map", key);
         
         [self displayDataForKey:key andURL:url];
     };
