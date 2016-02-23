@@ -2,8 +2,11 @@
 #import "DataProvider.h"
 
 @interface DataSourceButtonView ()
-    @property DataProvider* provider;
-    @property (nonatomic, strong) buttonCb callback;
+
+@property DataProvider* provider;
+
+@property (nonatomic, strong) buttonCb callback;
+
 @end
 
 @implementation DataSourceButtonView
